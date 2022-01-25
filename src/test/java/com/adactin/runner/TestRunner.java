@@ -10,24 +10,19 @@ import org.openqa.selenium.WebDriver;
 import com.adactin.baseclass.Base_Class;
 import com.property.FileReaderManaer;
 
-import cucumber.api.junit.Cucumber;
+import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
-
-//import cucumber.api.CucumberOptions;
-//import cucumber.api.junit.Cucumber;
-
-//import io.cucumber.junit.Cucumber;
-//import io.cucumber.junit.CucumberOptions;
 
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src//test//java//com//adactin//feature//Adactin.feature",
 	glue="com\\adactin\\stepdefinition",
+	plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 	//plugin = {"pretty", "html:Report\\CucumberReport"},
-	plugin = {"pretty", "html:Report\\Cucumber-Report"},
+	//plugin = {"pretty", "html:Report\\Cucumber-Report"},
 	//plugin = {"com.avenstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 	//		"timeline:test-output-thread/"},
-	tags= "{@Searchhotel}",
+	//tags= "{@Searchhotel}",
 	monochrome = true,
 	dryRun = false
 	)	
